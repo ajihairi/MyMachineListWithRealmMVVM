@@ -1,0 +1,6 @@
+framework module Pods_MyImageMachineApps {
+  umbrella header "Pods-MyImageMachineApps-umbrella.h"
+
+  export *
+  module * { export * }
+}

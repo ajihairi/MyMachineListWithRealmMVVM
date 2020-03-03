@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C2B9EFF180B8484A78CC659 /* Pods_MyImageMachineApps_MyImageMachineAppsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D258601F732C6B11F017FA /* Pods_MyImageMachineApps_MyImageMachineAppsUITests.framework */; };
+		8B391F99F30D5A64BA69FB2F /* Pods_MyImageMachineAppsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D3B1F7E937ECF9DFEABFD5 /* Pods_MyImageMachineAppsTests.framework */; };
+		A8DE6B8A360B45707AE816F6 /* Pods_MyImageMachineApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83233AB99C1303B78339182 /* Pods_MyImageMachineApps.framework */; };
 		FBB262C4240E888100C64057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB262C3240E888100C64057 /* AppDelegate.swift */; };
 		FBB262C6240E888100C64057 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB262C5240E888100C64057 /* SceneDelegate.swift */; };
 		FBB262C8240E888100C64057 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB262C7240E888100C64057 /* ViewController.swift */; };
@@ -15,6 +18,22 @@
 		FBB262D0240E888200C64057 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBB262CE240E888200C64057 /* LaunchScreen.storyboard */; };
 		FBB262DB240E888300C64057 /* MyImageMachineAppsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB262DA240E888300C64057 /* MyImageMachineAppsTests.swift */; };
 		FBB262E6240E888300C64057 /* MyImageMachineAppsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB262E5240E888300C64057 /* MyImageMachineAppsUITests.swift */; };
+		FBB262F4240E8A2200C64057 /* BXButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB262F3240E8A2200C64057 /* BXButton.swift */; };
+		FBB262F6240E8A7100C64057 /* GSImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB262F5240E8A7100C64057 /* GSImageView.swift */; };
+		FBB262F8240E8F1C00C64057 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB262F7240E8F1C00C64057 /* UIViewController+Extension.swift */; };
+		FBB262FA240E8F9C00C64057 /* RoutingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB262F9240E8F9C00C64057 /* RoutingData.swift */; };
+		FBB262FC240E902200C64057 /* MachineListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB262FB240E902200C64057 /* MachineListViewController.swift */; };
+		FBB262FE240E903500C64057 /* CodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB262FD240E903500C64057 /* CodeScannerViewController.swift */; };
+		FBB26308240E960800C64057 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB26307240E960800C64057 /* Models.swift */; };
+		FBB2630B240E9DEB00C64057 /* MachineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB26309240E9DEB00C64057 /* MachineTableViewCell.swift */; };
+		FBB2630C240E9DEB00C64057 /* MachineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB2630A240E9DEB00C64057 /* MachineTableViewCell.xib */; };
+		FBB26310240E9E5300C64057 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB2630E240E9E5300C64057 /* EmptyTableViewCell.swift */; };
+		FBB26311240E9E5300C64057 /* EmptyTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB2630F240E9E5300C64057 /* EmptyTableViewCell.xib */; };
+		FBB26313240E9F7D00C64057 /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB26312240E9F7D00C64057 /* CustomView.swift */; };
+		FBB26315240EA29D00C64057 /* MachineListProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB26314240EA29D00C64057 /* MachineListProtocol.swift */; };
+		FBB26317240EA35A00C64057 /* MachineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB26316240EA35A00C64057 /* MachineService.swift */; };
+		FBB26319240EA99B00C64057 /* MachineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB26318240EA99B00C64057 /* MachineViewModel.swift */; };
+		FBB2631E240EB71C00C64057 /* AddMachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB2631D240EB71C00C64057 /* AddMachineViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +54,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		327BA66BC425CB47E7B8767A /* Pods-MyImageMachineAppsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyImageMachineAppsTests.release.xcconfig"; path = "Target Support Files/Pods-MyImageMachineAppsTests/Pods-MyImageMachineAppsTests.release.xcconfig"; sourceTree = "<group>"; };
+		38AE4E3967365E0F28BA8607 /* Pods-MyImageMachineApps-MyImageMachineAppsUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyImageMachineApps-MyImageMachineAppsUITests.release.xcconfig"; path = "Target Support Files/Pods-MyImageMachineApps-MyImageMachineAppsUITests/Pods-MyImageMachineApps-MyImageMachineAppsUITests.release.xcconfig"; sourceTree = "<group>"; };
+		38D20FD0CC29D04A2C780CF9 /* Pods-MyImageMachineAppsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyImageMachineAppsTests.debug.xcconfig"; path = "Target Support Files/Pods-MyImageMachineAppsTests/Pods-MyImageMachineAppsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3BD75591547D0FB8BA5031FB /* Pods-MyImageMachineApps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyImageMachineApps.release.xcconfig"; path = "Target Support Files/Pods-MyImageMachineApps/Pods-MyImageMachineApps.release.xcconfig"; sourceTree = "<group>"; };
+		818D4514D733DF924A42C82E /* Pods-MyImageMachineApps-MyImageMachineAppsUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyImageMachineApps-MyImageMachineAppsUITests.debug.xcconfig"; path = "Target Support Files/Pods-MyImageMachineApps-MyImageMachineAppsUITests/Pods-MyImageMachineApps-MyImageMachineAppsUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B2D258601F732C6B11F017FA /* Pods_MyImageMachineApps_MyImageMachineAppsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyImageMachineApps_MyImageMachineAppsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B492B7053F363F3BFAF07AA1 /* Pods-MyImageMachineApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyImageMachineApps.debug.xcconfig"; path = "Target Support Files/Pods-MyImageMachineApps/Pods-MyImageMachineApps.debug.xcconfig"; sourceTree = "<group>"; };
+		B83233AB99C1303B78339182 /* Pods_MyImageMachineApps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyImageMachineApps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9D3B1F7E937ECF9DFEABFD5 /* Pods_MyImageMachineAppsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyImageMachineAppsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB262C0240E888100C64057 /* MyImageMachineApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyImageMachineApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB262C3240E888100C64057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBB262C5240E888100C64057 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +77,22 @@
 		FBB262E1240E888300C64057 /* MyImageMachineAppsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyImageMachineAppsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB262E5240E888300C64057 /* MyImageMachineAppsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyImageMachineAppsUITests.swift; sourceTree = "<group>"; };
 		FBB262E7240E888300C64057 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBB262F3240E8A2200C64057 /* BXButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BXButton.swift; sourceTree = "<group>"; };
+		FBB262F5240E8A7100C64057 /* GSImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GSImageView.swift; sourceTree = "<group>"; };
+		FBB262F7240E8F1C00C64057 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		FBB262F9240E8F9C00C64057 /* RoutingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingData.swift; sourceTree = "<group>"; };
+		FBB262FB240E902200C64057 /* MachineListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineListViewController.swift; sourceTree = "<group>"; };
+		FBB262FD240E903500C64057 /* CodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScannerViewController.swift; sourceTree = "<group>"; };
+		FBB26307240E960800C64057 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		FBB26309240E9DEB00C64057 /* MachineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineTableViewCell.swift; sourceTree = "<group>"; };
+		FBB2630A240E9DEB00C64057 /* MachineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MachineTableViewCell.xib; sourceTree = "<group>"; };
+		FBB2630E240E9E5300C64057 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
+		FBB2630F240E9E5300C64057 /* EmptyTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyTableViewCell.xib; sourceTree = "<group>"; };
+		FBB26312240E9F7D00C64057 /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		FBB26314240EA29D00C64057 /* MachineListProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineListProtocol.swift; sourceTree = "<group>"; };
+		FBB26316240EA35A00C64057 /* MachineService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineService.swift; sourceTree = "<group>"; };
+		FBB26318240EA99B00C64057 /* MachineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineViewModel.swift; sourceTree = "<group>"; };
+		FBB2631D240EB71C00C64057 /* AddMachineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMachineViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8DE6B8A360B45707AE816F6 /* Pods_MyImageMachineApps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B391F99F30D5A64BA69FB2F /* Pods_MyImageMachineAppsTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +116,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C2B9EFF180B8484A78CC659 /* Pods_MyImageMachineApps_MyImageMachineAppsUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1E7194E4FEA7A804F4CBA91B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B83233AB99C1303B78339182 /* Pods_MyImageMachineApps.framework */,
+				B2D258601F732C6B11F017FA /* Pods_MyImageMachineApps_MyImageMachineAppsUITests.framework */,
+				E9D3B1F7E937ECF9DFEABFD5 /* Pods_MyImageMachineAppsTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9C1E55DEA1A1177622B45243 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B492B7053F363F3BFAF07AA1 /* Pods-MyImageMachineApps.debug.xcconfig */,
+				3BD75591547D0FB8BA5031FB /* Pods-MyImageMachineApps.release.xcconfig */,
+				818D4514D733DF924A42C82E /* Pods-MyImageMachineApps-MyImageMachineAppsUITests.debug.xcconfig */,
+				38AE4E3967365E0F28BA8607 /* Pods-MyImageMachineApps-MyImageMachineAppsUITests.release.xcconfig */,
+				38D20FD0CC29D04A2C780CF9 /* Pods-MyImageMachineAppsTests.debug.xcconfig */,
+				327BA66BC425CB47E7B8767A /* Pods-MyImageMachineAppsTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FBB262B7240E888100C64057 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +153,8 @@
 				FBB262D9240E888300C64057 /* MyImageMachineAppsTests */,
 				FBB262E4240E888300C64057 /* MyImageMachineAppsUITests */,
 				FBB262C1240E888100C64057 /* Products */,
+				9C1E55DEA1A1177622B45243 /* Pods */,
+				1E7194E4FEA7A804F4CBA91B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,8 +173,13 @@
 			children = (
 				FBB262C3240E888100C64057 /* AppDelegate.swift */,
 				FBB262C5240E888100C64057 /* SceneDelegate.swift */,
-				FBB262C7240E888100C64057 /* ViewController.swift */,
-				FBB262C9240E888100C64057 /* Main.storyboard */,
+				FBB26301240E957000C64057 /* Main */,
+				FBB262FF240E955400C64057 /* Machine List */,
+				FBB26300240E955F00C64057 /* Code Scanner */,
+				FBB26304240E95A700C64057 /* Routes */,
+				FBB26303240E958E00C64057 /* Extensions */,
+				FBB26302240E958300C64057 /* StoryBoards */,
+				FBB26305240E95C000C64057 /* UI+Helper */,
 				FBB262CC240E888200C64057 /* Assets.xcassets */,
 				FBB262CE240E888200C64057 /* LaunchScreen.storyboard */,
 				FBB262D1240E888200C64057 /* Info.plist */,
@@ -128,6 +205,113 @@
 			path = MyImageMachineAppsUITests;
 			sourceTree = "<group>";
 		};
+		FBB262FF240E955400C64057 /* Machine List */ = {
+			isa = PBXGroup;
+			children = (
+				FBB26306240E95F200C64057 /* Model */,
+				FBB2630D240E9E2900C64057 /* Cell */,
+				FBB2631A240EB6BE00C64057 /* Protocol */,
+				FBB2631B240EB6C900C64057 /* Service */,
+				FBB2631C240EB6DD00C64057 /* ViewModel */,
+				FBB262FB240E902200C64057 /* MachineListViewController.swift */,
+				FBB2631D240EB71C00C64057 /* AddMachineViewController.swift */,
+			);
+			path = "Machine List";
+			sourceTree = "<group>";
+		};
+		FBB26300240E955F00C64057 /* Code Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				FBB262FD240E903500C64057 /* CodeScannerViewController.swift */,
+			);
+			path = "Code Scanner";
+			sourceTree = "<group>";
+		};
+		FBB26301240E957000C64057 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FBB262C7240E888100C64057 /* ViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FBB26302240E958300C64057 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				FBB262C9240E888100C64057 /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		FBB26303240E958E00C64057 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FBB262F7240E8F1C00C64057 /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FBB26304240E95A700C64057 /* Routes */ = {
+			isa = PBXGroup;
+			children = (
+				FBB262F9240E8F9C00C64057 /* RoutingData.swift */,
+			);
+			path = Routes;
+			sourceTree = "<group>";
+		};
+		FBB26305240E95C000C64057 /* UI+Helper */ = {
+			isa = PBXGroup;
+			children = (
+				FBB262F3240E8A2200C64057 /* BXButton.swift */,
+				FBB262F5240E8A7100C64057 /* GSImageView.swift */,
+				FBB26312240E9F7D00C64057 /* CustomView.swift */,
+			);
+			path = "UI+Helper";
+			sourceTree = "<group>";
+		};
+		FBB26306240E95F200C64057 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBB26307240E960800C64057 /* Models.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FBB2630D240E9E2900C64057 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FBB26309240E9DEB00C64057 /* MachineTableViewCell.swift */,
+				FBB2630A240E9DEB00C64057 /* MachineTableViewCell.xib */,
+				FBB2630E240E9E5300C64057 /* EmptyTableViewCell.swift */,
+				FBB2630F240E9E5300C64057 /* EmptyTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FBB2631A240EB6BE00C64057 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				FBB26314240EA29D00C64057 /* MachineListProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		FBB2631B240EB6C900C64057 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FBB26316240EA35A00C64057 /* MachineService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		FBB2631C240EB6DD00C64057 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FBB26318240EA99B00C64057 /* MachineViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +319,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FBB262EA240E888300C64057 /* Build configuration list for PBXNativeTarget "MyImageMachineApps" */;
 			buildPhases = (
+				508CEA4DBABCC64E54E1F56E /* [CP] Check Pods Manifest.lock */,
 				FBB262BC240E888100C64057 /* Sources */,
 				FBB262BD240E888100C64057 /* Frameworks */,
 				FBB262BE240E888100C64057 /* Resources */,
+				B0C45E8EE4FFFDA2FE6764EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -152,6 +338,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FBB262ED240E888300C64057 /* Build configuration list for PBXNativeTarget "MyImageMachineAppsTests" */;
 			buildPhases = (
+				DB3DC27C971DE2042EE33279 /* [CP] Check Pods Manifest.lock */,
 				FBB262D2240E888300C64057 /* Sources */,
 				FBB262D3240E888300C64057 /* Frameworks */,
 				FBB262D4240E888300C64057 /* Resources */,
@@ -170,9 +357,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FBB262F0240E888300C64057 /* Build configuration list for PBXNativeTarget "MyImageMachineAppsUITests" */;
 			buildPhases = (
+				DEB9609E578368164DFE16A2 /* [CP] Check Pods Manifest.lock */,
 				FBB262DD240E888300C64057 /* Sources */,
 				FBB262DE240E888300C64057 /* Frameworks */,
 				FBB262DF240E888300C64057 /* Resources */,
+				B2A527A427663E81FF5F0B9D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -233,6 +422,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBB262D0240E888200C64057 /* LaunchScreen.storyboard in Resources */,
+				FBB26311240E9E5300C64057 /* EmptyTableViewCell.xib in Resources */,
+				FBB2630C240E9DEB00C64057 /* MachineTableViewCell.xib in Resources */,
 				FBB262CD240E888200C64057 /* Assets.xcassets in Resources */,
 				FBB262CB240E888100C64057 /* Main.storyboard in Resources */,
 			);
@@ -254,14 +445,131 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		508CEA4DBABCC64E54E1F56E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyImageMachineApps-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0C45E8EE4FFFDA2FE6764EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyImageMachineApps/Pods-MyImageMachineApps-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyImageMachineApps/Pods-MyImageMachineApps-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyImageMachineApps/Pods-MyImageMachineApps-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B2A527A427663E81FF5F0B9D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyImageMachineApps-MyImageMachineAppsUITests/Pods-MyImageMachineApps-MyImageMachineAppsUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyImageMachineApps-MyImageMachineAppsUITests/Pods-MyImageMachineApps-MyImageMachineAppsUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyImageMachineApps-MyImageMachineAppsUITests/Pods-MyImageMachineApps-MyImageMachineAppsUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB3DC27C971DE2042EE33279 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyImageMachineAppsTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEB9609E578368164DFE16A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyImageMachineApps-MyImageMachineAppsUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FBB262BC240E888100C64057 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBB262F8240E8F1C00C64057 /* UIViewController+Extension.swift in Sources */,
+				FBB26315240EA29D00C64057 /* MachineListProtocol.swift in Sources */,
+				FBB26319240EA99B00C64057 /* MachineViewModel.swift in Sources */,
 				FBB262C8240E888100C64057 /* ViewController.swift in Sources */,
+				FBB2630B240E9DEB00C64057 /* MachineTableViewCell.swift in Sources */,
+				FBB26317240EA35A00C64057 /* MachineService.swift in Sources */,
+				FBB262FC240E902200C64057 /* MachineListViewController.swift in Sources */,
 				FBB262C4240E888100C64057 /* AppDelegate.swift in Sources */,
+				FBB26310240E9E5300C64057 /* EmptyTableViewCell.swift in Sources */,
+				FBB26313240E9F7D00C64057 /* CustomView.swift in Sources */,
+				FBB262FA240E8F9C00C64057 /* RoutingData.swift in Sources */,
+				FBB262FE240E903500C64057 /* CodeScannerViewController.swift in Sources */,
+				FBB2631E240EB71C00C64057 /* AddMachineViewController.swift in Sources */,
 				FBB262C6240E888100C64057 /* SceneDelegate.swift in Sources */,
+				FBB262F4240E8A2200C64057 /* BXButton.swift in Sources */,
+				FBB262F6240E8A7100C64057 /* GSImageView.swift in Sources */,
+				FBB26308240E960800C64057 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +740,7 @@
 		};
 		FBB262EB240E888300C64057 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B492B7053F363F3BFAF07AA1 /* Pods-MyImageMachineApps.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +759,7 @@
 		};
 		FBB262EC240E888300C64057 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3BD75591547D0FB8BA5031FB /* Pods-MyImageMachineApps.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +778,7 @@
 		};
 		FBB262EE240E888300C64057 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38D20FD0CC29D04A2C780CF9 /* Pods-MyImageMachineAppsTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +801,7 @@
 		};
 		FBB262EF240E888300C64057 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 327BA66BC425CB47E7B8767A /* Pods-MyImageMachineAppsTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +824,7 @@
 		};
 		FBB262F1240E888300C64057 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 818D4514D733DF924A42C82E /* Pods-MyImageMachineApps-MyImageMachineAppsUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +845,7 @@
 		};
 		FBB262F2240E888300C64057 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38AE4E3967365E0F28BA8607 /* Pods-MyImageMachineApps-MyImageMachineAppsUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
