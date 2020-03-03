@@ -34,6 +34,8 @@
 		FBB26317240EA35A00C64057 /* MachineService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB26316240EA35A00C64057 /* MachineService.swift */; };
 		FBB26319240EA99B00C64057 /* MachineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB26318240EA99B00C64057 /* MachineViewModel.swift */; };
 		FBB2631E240EB71C00C64057 /* AddMachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB2631D240EB71C00C64057 /* AddMachineViewController.swift */; };
+		FBB26322240EBB0E00C64057 /* AddMachineColl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB26320240EBB0E00C64057 /* AddMachineColl.swift */; };
+		FBB26323240EBB0E00C64057 /* AddMachineColl.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB26321240EBB0E00C64057 /* AddMachineColl.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +95,8 @@
 		FBB26316240EA35A00C64057 /* MachineService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineService.swift; sourceTree = "<group>"; };
 		FBB26318240EA99B00C64057 /* MachineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineViewModel.swift; sourceTree = "<group>"; };
 		FBB2631D240EB71C00C64057 /* AddMachineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMachineViewController.swift; sourceTree = "<group>"; };
+		FBB26320240EBB0E00C64057 /* AddMachineColl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMachineColl.swift; sourceTree = "<group>"; };
+		FBB26321240EBB0E00C64057 /* AddMachineColl.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddMachineColl.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +178,7 @@
 				FBB262C3240E888100C64057 /* AppDelegate.swift */,
 				FBB262C5240E888100C64057 /* SceneDelegate.swift */,
 				FBB26301240E957000C64057 /* Main */,
+				FBB2631F240EBAE700C64057 /* Add View */,
 				FBB262FF240E955400C64057 /* Machine List */,
 				FBB26300240E955F00C64057 /* Code Scanner */,
 				FBB26304240E95A700C64057 /* Routes */,
@@ -214,7 +219,6 @@
 				FBB2631B240EB6C900C64057 /* Service */,
 				FBB2631C240EB6DD00C64057 /* ViewModel */,
 				FBB262FB240E902200C64057 /* MachineListViewController.swift */,
-				FBB2631D240EB71C00C64057 /* AddMachineViewController.swift */,
 			);
 			path = "Machine List";
 			sourceTree = "<group>";
@@ -310,6 +314,24 @@
 				FBB26318240EA99B00C64057 /* MachineViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FBB2631F240EBAE700C64057 /* Add View */ = {
+			isa = PBXGroup;
+			children = (
+				FBB26324240EBB2100C64057 /* Coll */,
+				FBB2631D240EB71C00C64057 /* AddMachineViewController.swift */,
+			);
+			path = "Add View";
+			sourceTree = "<group>";
+		};
+		FBB26324240EBB2100C64057 /* Coll */ = {
+			isa = PBXGroup;
+			children = (
+				FBB26320240EBB0E00C64057 /* AddMachineColl.swift */,
+				FBB26321240EBB0E00C64057 /* AddMachineColl.xib */,
+			);
+			path = Coll;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -426,6 +448,7 @@
 				FBB2630C240E9DEB00C64057 /* MachineTableViewCell.xib in Resources */,
 				FBB262CD240E888200C64057 /* Assets.xcassets in Resources */,
 				FBB262CB240E888100C64057 /* Main.storyboard in Resources */,
+				FBB26323240EBB0E00C64057 /* AddMachineColl.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,6 +589,7 @@
 				FBB262FA240E8F9C00C64057 /* RoutingData.swift in Sources */,
 				FBB262FE240E903500C64057 /* CodeScannerViewController.swift in Sources */,
 				FBB2631E240EB71C00C64057 /* AddMachineViewController.swift in Sources */,
+				FBB26322240EBB0E00C64057 /* AddMachineColl.swift in Sources */,
 				FBB262C6240E888100C64057 /* SceneDelegate.swift in Sources */,
 				FBB262F4240E8A2200C64057 /* BXButton.swift in Sources */,
 				FBB262F6240E8A7100C64057 /* GSImageView.swift in Sources */,
