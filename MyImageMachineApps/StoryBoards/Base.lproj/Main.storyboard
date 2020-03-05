@@ -343,12 +343,20 @@
                                     <action selector="saveAction:" destination="ixc-YO-Wbx" eventType="touchUpInside" id="p8Q-XX-8IR"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WW1-ML-cgt">
+                                <rect key="frame" x="87" y="351" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Fec-02-Z5b"/>
+                                    <constraint firstAttribute="height" constant="240" id="NUK-37-p76"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="rG6-Dn-Q2r" firstAttribute="bottom" secondItem="UlZ-rK-Llv" secondAttribute="bottom" constant="25" id="22t-RL-ABi"/>
-                            <constraint firstItem="UlZ-rK-Llv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aFp-uS-rAr" secondAttribute="bottom" constant="15" id="2Ry-Vn-eP5"/>
+                            <constraint firstItem="UlZ-rK-Llv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WW1-ML-cgt" secondAttribute="bottom" constant="15" id="2Ry-Vn-eP5"/>
                             <constraint firstItem="rG6-Dn-Q2r" firstAttribute="trailing" secondItem="aFp-uS-rAr" secondAttribute="trailing" constant="15" id="50p-Jj-XyC"/>
+                            <constraint firstItem="WW1-ML-cgt" firstAttribute="top" secondItem="aFp-uS-rAr" secondAttribute="bottom" constant="36" id="HdL-Kf-J2z"/>
                             <constraint firstItem="UVt-Z3-HDW" firstAttribute="leading" secondItem="rG6-Dn-Q2r" secondAttribute="leading" constant="15" id="JX0-lV-08e"/>
                             <constraint firstItem="UVt-Z3-HDW" firstAttribute="top" secondItem="myf-uI-OXy" secondAttribute="bottom" constant="8" id="N4L-RP-cQf"/>
                             <constraint firstItem="aFp-uS-rAr" firstAttribute="top" secondItem="Jtk-f0-F3Y" secondAttribute="bottom" constant="15" id="Q1X-bi-ULu"/>
@@ -356,6 +364,7 @@
                             <constraint firstItem="WUs-hO-1zA" firstAttribute="trailing" secondItem="UVt-Z3-HDW" secondAttribute="trailing" id="Z7D-Ai-yKR"/>
                             <constraint firstItem="rG6-Dn-Q2r" firstAttribute="trailing" secondItem="UlZ-rK-Llv" secondAttribute="trailing" constant="15" id="aON-0K-Afx"/>
                             <constraint firstItem="aFp-uS-rAr" firstAttribute="leading" secondItem="rG6-Dn-Q2r" secondAttribute="leading" constant="15" id="b79-Pe-GKH"/>
+                            <constraint firstItem="WW1-ML-cgt" firstAttribute="centerX" secondItem="rG6-Dn-Q2r" secondAttribute="centerX" id="bvK-ts-zv3"/>
                             <constraint firstItem="WUs-hO-1zA" firstAttribute="top" secondItem="UVt-Z3-HDW" secondAttribute="bottom" constant="15" id="dBo-pV-npg"/>
                             <constraint firstItem="Jtk-f0-F3Y" firstAttribute="top" secondItem="WUs-hO-1zA" secondAttribute="bottom" constant="8" id="dVF-IH-ci6"/>
                             <constraint firstItem="rG6-Dn-Q2r" firstAttribute="trailing" secondItem="myf-uI-OXy" secondAttribute="trailing" constant="15" id="dyk-It-XLL"/>
@@ -371,6 +380,7 @@
                     <connections>
                         <outlet property="imageCollectionView" destination="aFp-uS-rAr" id="bEq-7n-CL4"/>
                         <outlet property="nameMachineTF" destination="UVt-Z3-HDW" id="S3v-Hw-w8f"/>
+                        <outlet property="qrImageView" destination="WW1-ML-cgt" id="V9a-aM-WR8"/>
                         <outlet property="saveBtn" destination="UlZ-rK-Llv" id="b4V-Ur-OJo"/>
                         <outlet property="typeMachineTF" destination="Jtk-f0-F3Y" id="XeI-Mq-1WB"/>
                     </connections>

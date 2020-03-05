@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+@available(iOS 13.0, *)
 public class RoutingData {
     
     public func machineListScreen() -> UIViewController {
@@ -21,8 +22,13 @@ public class RoutingData {
         return codeScanner
     }
     
-    public func addMachineScreen() -> UIViewController {
-        let addView = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(identifier: "AddMachineViewController") as! AddMachineViewController
+    var addView = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(identifier: "AddMachineViewController") as! AddMachineViewController
+    func addMachineScreen(_ isAdding: Bool) -> AddMachineViewController {
+        if isAdding {
+            addView.whichShow = .add
+        } else {
+            addView.whichShow = .edit
+        }
         return addView
     }
 }

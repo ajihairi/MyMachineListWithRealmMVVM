@@ -27,8 +27,13 @@ class AddMachineColl: UICollectionViewCell {
         didSet {
             if data != nil {
                 self.titleLabel.text = self.data!.name
-                let image = DataManager().retrieveImage(forKey: self.data!.name, inStorageType: .userDefaults)
-                self.imageAsset.image = image
+                if data!.id != 0 {
+                    let image = DataManager().load(fileName: self.data!.name)
+                    self.imageAsset.image = image
+                } else {
+                    let image = DataManager().retrieveImage(forKey: self.data!.name, inStorageType: .userDefaults)
+                    self.imageAsset.image = image
+                }
                 self.imageAsset.contentMode = .scaleAspectFill
             }
         }

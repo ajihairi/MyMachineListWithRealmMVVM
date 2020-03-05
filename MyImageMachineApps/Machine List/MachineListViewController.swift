@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class MachineListViewController: UIViewController {
 
     @IBOutlet weak var machineTableView: UITableView!
@@ -17,7 +18,8 @@ class MachineListViewController: UIViewController {
     
     var machineList = Array<MachineModelObject>()
     var viewModel = MachineViewModel()
-    
+    var nameFilter = false
+    var typefilter = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +30,11 @@ class MachineListViewController: UIViewController {
         machineTableView.estimatedRowHeight = 60
         machineTableView.rowHeight = UITableView.automaticDimension
         machineTableView.separatorStyle = .none
+        
+        self.sortNameBtn.borderColor = .blue
+        self.sortTypeBtn.borderColor = .blue
+        self.sortNameBtn.borderWidth = 0
+        self.sortTypeBtn.borderWidth = 0
         // Do any additional setup after loading the view.
     }
     
@@ -56,20 +63,42 @@ class MachineListViewController: UIViewController {
             self.machineList = self.viewModel.machineList
             self.machineTableView.reloadData()
         }
-        print("ini list", machineList)
         self.machineTableView.reloadData()
     }
     
     @IBAction func addAction(_ sender: BXButton) {
-        self.goToScreen(RoutingData().addMachineScreen())
+        self.goToScreen(RoutingData().addMachineScreen(true))
     }
     @IBAction func sortNameAction(_ sender: BXButton) {
+        self.nameFilter = !self.nameFilter
+        if self.nameFilter {
+            self.sortNameBtn.borderWidth = 2
+            self.sortTypeBtn.borderWidth = 0
+            self.machineList = self.machineList.sorted(by: {$0.name < $1.name})
+        } else {
+            self.sortNameBtn.borderWidth = 0
+            self.sortTypeBtn.borderWidth = 0
+            self.machineList = self.machineList.sorted(by: {$0.name > $1.name})
+        }
+        self.machineTableView.reloadData()
     }
     @IBAction func sortTypeAction(_ sender: BXButton) {
+        self.typefilter = !self.typefilter
+        if self.typefilter {
+            self.sortNameBtn.borderWidth = 0
+            self.sortTypeBtn.borderWidth = 2
+            self.machineList = self.machineList.sorted(by: {$0.type < $1.type})
+        } else {
+            self.sortNameBtn.borderWidth = 0
+            self.sortTypeBtn.borderWidth = 0
+            self.machineList = self.machineList.sorted(by: {$0.type > $1.type})
+        }
+        self.machineTableView.reloadData()
     }
     
 }
 
+@available(iOS 13.0, *)
 extension MachineListViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if self.machineList.count > 0 {
@@ -96,6 +125,14 @@ extension MachineListViewController: UITableViewDelegate, UITableViewDataSource 
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if self.machineList.count > 0 {
+            TempHelper.shared.machineData = self.machineList[indexPath.row]
+            RoutingData().addView.whichShow = .edit
+            self.goToScreen(RoutingData().addMachineScreen(false))
+        }
+    }
+    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             let deletingData = self.machineList[indexPath.row]
@@ -103,7 +140,6 @@ extension MachineListViewController: UITableViewDelegate, UITableViewDataSource 
                 self.setupViewModel()
             }
         } else if editingStyle == .insert {
-            self.goToScreen(RoutingData().addMachineScreen())
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }

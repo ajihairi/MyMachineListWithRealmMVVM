@@ -21,7 +21,7 @@ class MachineTableViewCell: UITableViewCell {
         didSet {
             if self.data != nil {
                 if self.data!.images.count > 0 {
-                    self.machineImage.image = self.load(fileName: self.data!.images.first!.name)
+                    self.machineImage.image = DataManager().load(fileName: self.data!.images.last!.name)
                 }
                 self.machineImage.contentMode = .scaleAspectFill
                 self.machineName.text = self.data!.name
@@ -40,20 +40,7 @@ class MachineTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    var documentsUrl: URL {
-        return FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
-    }
     
-    private func load(fileName: String) -> UIImage? {
-        let fileURL = documentsUrl.appendingPathComponent(fileName)
-        do {
-            let imageData = try Data(contentsOf: fileURL)
-            return UIImage(data: imageData)
-        } catch {
-            print("Error loading image : \(error)")
-        }
-        return nil
-    }
     class var reusableIndentifier: String { return String(describing: self) }
     static func reusableNIB() -> UINib {
         return UINib(nibName: self.reusableIndentifier , bundle: Bundle.main)

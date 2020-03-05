@@ -11,7 +11,7 @@ import UIKit
 
 
 extension UIViewController {
-    func goToScreen(_ screen: UIViewController) {
-        self.navigationController?.pushViewController(screen, animated: true)
+    func goToScreen(_ screen: Any) {
+        self.navigationController?.pushViewController(screen as! UIViewController, animated: true)
     }
 }

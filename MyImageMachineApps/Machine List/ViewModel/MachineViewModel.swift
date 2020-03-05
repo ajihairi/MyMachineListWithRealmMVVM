@@ -8,6 +8,7 @@
 
 import Foundation
 import RealmSwift
+import UIKit
 
 class MachineViewModel {
     private let service: MachineListProtocol
@@ -67,15 +68,17 @@ class MachineViewModel {
             data.id = incrementID()
             for (index,item) in data.images.enumerated() {
                 item.id = data.id
+                print("terpanggil ga sih")
+//                UIImageWriteToSavedPhotosAlbum(item.imageData!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
                 guard let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else {return}
-                guard let writePath = NSURL(fileURLWithPath: docPath).appendingPathComponent("MachineName_\(index).JPG") else { return }
+                guard let writePath = NSURL(fileURLWithPath: docPath).appendingPathComponent("MachineName_\(index + item.id).JPG") else { return }
                 if let dataImgs = item.imageData?.jpegData(compressionQuality: 10), !FileManager.default.fileExists(atPath: writePath.path) {
                     do {
                         try dataImgs.write(to: writePath)
                         item.name = writePath.lastPathComponent
                         item.imageString = writePath.absoluteString
-                            print("file saved")
-                        
+                        print("file saved")
+                        item.imageData = nil
                         if index == data.images.count - 1 {
                             self.service.addMachineList(data: data, success: { doneData in
                                 completion()
@@ -83,12 +86,20 @@ class MachineViewModel {
                                 self.alertMessage = error
                             }
                         }
-                        item.imageData = nil
                     } catch {
                             print("error saving file:", error)
                     }
                 }
             }
+        }
+    }
+    
+    @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+        if let error = error {
+            // we got back an error!
+            self.alertMessage = "Save error \(error.localizedDescription)"
+        } else {
+            self.alertMessage = "Saved"
         }
     }
     

@@ -13,6 +13,11 @@ import AVFoundation
 import AVKit
 import Photos
 
+enum whichView {
+    case add
+    case edit
+}
+
 
 class AddMachineViewController: UIViewController {
 
@@ -20,12 +25,15 @@ class AddMachineViewController: UIViewController {
     @IBOutlet weak var typeMachineTF: UITextField!
     @IBOutlet weak var imageCollectionView: UICollectionView!
     @IBOutlet weak var saveBtn: BXButton!
+    @IBOutlet weak var qrImageView: UIImageView!
     
     var dataAdd = MachineModelObject()
+    var filteredImages = Array<ImageModel>()
     var dataImageObject = ImageModelObject()
     var dataImg: ImageModel = ImageModel()
     var selectedItems = [YPMediaItem]()
-    
+    var whichShow = whichView.add
+
     var viewModel = MachineViewModel()
     
     // MARK: - Setting up image picker
@@ -38,9 +46,12 @@ class AddMachineViewController: UIViewController {
         imageCollectionView.dataSource = self
         imageCollectionView.register(AddMachineColl.reusableNIB(), forCellWithReuseIdentifier: AddMachineColl.reusableIndentifier)
         imageCollectionView.register(AddNewCollectionViewCell.reusableNIB(), forCellWithReuseIdentifier: AddNewCollectionViewCell.reusableIndentifier)
-        setupViewModel()
-        imageCollectionView.reloadData()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        self.setupViewModel()
     }
     
     func setupViewModel() {
@@ -57,14 +68,39 @@ class AddMachineViewController: UIViewController {
                 print("loaded")
             }
         }
+        
+        if self.whichShow == .add {
+            self.qrImageView.isHidden = true
+        } else {
+            self.dataAdd = TempHelper.shared.machineData
+            for item in self.dataAdd.images {
+                if item.id == self.dataAdd.id {
+                    var imageDat = ImageModel()
+                    imageDat.id = item.id
+                    imageDat.imageString = item.imageString
+                    imageDat.name = item.name
+                    self.filteredImages.append(imageDat)
+                }
+            }
+            self.filteredImages = self.filteredImages.sorted(by: {$0.name! < $1.name!})
+            self.typeMachineTF.text = self.dataAdd.type
+            self.nameMachineTF.text = self.dataAdd.name
+            self.qrImageView.isHidden = false
+            self.qrImageView.image = QRGenerators().generateQRCode(from: "\(self.dataAdd.code_num)")
+            self.imageCollectionView.reloadData()
+        }
     }
     
     @IBAction func saveAction(_ sender: Any) {
         self.dataAdd.name = nameMachineTF.text ?? ""
         self.dataAdd.type = typeMachineTF.text?.lowercased().trimmingCharacters(in: .whitespaces) ?? ""
-        self.viewModel.addMachineData(data: self.dataAdd) {
-            //show alert success
-            self.navigationController?.popViewController(animated: true)
+        if self.whichShow == .add {
+            self.viewModel.addMachineData(data: self.dataAdd) {
+                //show alert success
+                self.navigationController?.popViewController(animated: true)
+            }
+        } else {
+            // edit here
         }
     }
     
@@ -72,8 +108,14 @@ class AddMachineViewController: UIViewController {
 
 extension AddMachineViewController: addMachineCollDelegate {
     func didDelete(index: Int) {
-        self.dataAdd.images.remove(at: index)
-        self.imageCollectionView.reloadData()
+        if self.whichShow == .edit {
+            self.filteredImages[index].id = 0
+            self.filteredImages = self.filteredImages.filter({$0.id == self.dataAdd.id})
+            self.imageCollectionView.reloadSections(NSIndexSet(index: 1) as IndexSet)
+        } else {
+            self.dataAdd.images.remove(at: index)
+            self.imageCollectionView.reloadData()
+        }
     }
     
     func didView(image: UIImage) {
@@ -86,12 +128,24 @@ extension AddMachineViewController: addMachineCollDelegate {
 extension AddMachineViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if section == 1 {
-            return self.dataAdd.images.count
-        } else {
-            if self.dataAdd.images.count == 10 {
-                return 0
+            if self.whichShow == .edit {
+                return self.filteredImages.count
             } else {
-                return 1
+                return self.dataAdd.images.count
+            }
+        } else {
+            if self.whichShow == .edit {
+                if self.filteredImages.count == 10 {
+                    return 0
+                } else {
+                    return 1
+                }
+            } else {
+                if self.dataAdd.images.count == 10 {
+                    return 0
+                } else {
+                    return 1
+                }
             }
         }
     }
@@ -106,12 +160,20 @@ extension AddMachineViewController: UICollectionViewDelegate, UICollectionViewDa
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AddMachineColl.reusableIndentifier, for: indexPath) as! AddMachineColl
-            if self.dataAdd.images.count > 0 {
-                cell.section = indexPath.section
-                cell.index = indexPath.item
-                cell.data = self.dataAdd.images[indexPath.item]
-            }
             cell.delegate = self
+            if self.whichShow == .edit {
+                if self.filteredImages.count > 0 {
+                    cell.section = indexPath.section
+                    cell.index = indexPath.item
+                    cell.data = self.dataAdd.images[indexPath.item]
+                }
+            } else {
+                if self.dataAdd.images.count > 0 {
+                    cell.section = indexPath.section
+                    cell.index = indexPath.item
+                    cell.data = self.dataAdd.images[indexPath.item]
+                }
+            }
             return cell
         }
     }
@@ -125,6 +187,7 @@ extension AddMachineViewController: UICollectionViewDelegate, UICollectionViewDa
             // open galery here
             self.didOpenGallery()
         } else {
+            print("index", indexPath.item, indexPath.row)
             // open image here
         }
     }
@@ -193,41 +256,16 @@ extension AddMachineViewController: UICollectionViewDelegate, UICollectionViewDa
         
     
     func appendImages(_ image: ImageModel) {
-        let imageData = ImageModelObject()
-        imageData.name = image.name ?? ""
-        imageData.imageString = image.imageString ?? ""
-        imageData.imageData = image.imageData
-        self.dataAdd.images.append(imageData)
-        print("data list", dataAdd.images)
+        if self.whichShow == .edit {
+            self.filteredImages.append(image)
+        } else {
+            let imageData = ImageModelObject()
+            imageData.name = image.name ?? ""
+            imageData.imageString = image.imageString ?? ""
+            imageData.imageData = image.imageData
+            self.dataAdd.images.append(imageData)
+        }
         self.imageCollectionView.reloadData()
     }
 }
 
-extension PHAsset {
-    var originalFilename: String? {
-        return PHAssetResource.assetResources(for: self).first?.originalFilename
-    }
-    
-    func getURL(completionHandler : @escaping ((_ responseURL : URL?) -> Void)){
-        if self.mediaType == .image {
-            let options: PHContentEditingInputRequestOptions = PHContentEditingInputRequestOptions()
-            options.canHandleAdjustmentData = {(adjustmeta: PHAdjustmentData) -> Bool in
-                return true
-            }
-            self.requestContentEditingInput(with: options, completionHandler: {(contentEditingInput: PHContentEditingInput?, info: [AnyHashable : Any]) -> Void in
-                completionHandler(contentEditingInput!.fullSizeImageURL as URL?)
-            })
-        } else if self.mediaType == .video {
-            let options: PHVideoRequestOptions = PHVideoRequestOptions()
-            options.version = .original
-            PHImageManager.default().requestAVAsset(forVideo: self, options: options, resultHandler: {(asset: AVAsset?, audioMix: AVAudioMix?, info: [AnyHashable : Any]?) -> Void in
-                if let urlAsset = asset as? AVURLAsset {
-                    let localVideoUrl: URL = urlAsset.url as URL
-                    completionHandler(localVideoUrl)
-                } else {
-                    completionHandler(nil)
-                }
-            })
-        }
-    }
-}

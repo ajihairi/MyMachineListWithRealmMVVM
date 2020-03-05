@@ -8,6 +8,7 @@
 
 import UIKit
 
+@available(iOS 13.0, *)
 class ViewController: UIViewController {
 
     @IBOutlet weak var codeReaderBtn: BXButton!
