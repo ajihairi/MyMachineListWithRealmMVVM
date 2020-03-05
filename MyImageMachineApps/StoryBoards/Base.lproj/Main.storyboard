@@ -350,12 +350,19 @@
                                     <constraint firstAttribute="height" constant="240" id="NUK-37-p76"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Code: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h0A-WT-00j">
+                                <rect key="frame" x="87" y="326" width="240" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="rG6-Dn-Q2r" firstAttribute="bottom" secondItem="UlZ-rK-Llv" secondAttribute="bottom" constant="25" id="22t-RL-ABi"/>
                             <constraint firstItem="UlZ-rK-Llv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WW1-ML-cgt" secondAttribute="bottom" constant="15" id="2Ry-Vn-eP5"/>
                             <constraint firstItem="rG6-Dn-Q2r" firstAttribute="trailing" secondItem="aFp-uS-rAr" secondAttribute="trailing" constant="15" id="50p-Jj-XyC"/>
+                            <constraint firstItem="WW1-ML-cgt" firstAttribute="top" secondItem="h0A-WT-00j" secondAttribute="bottom" constant="8" id="5aI-kZ-cOE"/>
                             <constraint firstItem="WW1-ML-cgt" firstAttribute="top" secondItem="aFp-uS-rAr" secondAttribute="bottom" constant="36" id="HdL-Kf-J2z"/>
                             <constraint firstItem="UVt-Z3-HDW" firstAttribute="leading" secondItem="rG6-Dn-Q2r" secondAttribute="leading" constant="15" id="JX0-lV-08e"/>
                             <constraint firstItem="UVt-Z3-HDW" firstAttribute="top" secondItem="myf-uI-OXy" secondAttribute="bottom" constant="8" id="N4L-RP-cQf"/>
@@ -371,13 +378,16 @@
                             <constraint firstItem="myf-uI-OXy" firstAttribute="top" secondItem="rG6-Dn-Q2r" secondAttribute="top" constant="15" id="i5u-hi-QMh"/>
                             <constraint firstItem="UlZ-rK-Llv" firstAttribute="leading" secondItem="rG6-Dn-Q2r" secondAttribute="leading" constant="15" id="ijM-Y4-jJa"/>
                             <constraint firstItem="rG6-Dn-Q2r" firstAttribute="trailing" secondItem="UVt-Z3-HDW" secondAttribute="trailing" constant="15" id="jqe-dn-eSC"/>
+                            <constraint firstItem="h0A-WT-00j" firstAttribute="trailing" secondItem="WW1-ML-cgt" secondAttribute="trailing" id="lAI-yT-Mf3"/>
                             <constraint firstItem="WUs-hO-1zA" firstAttribute="leading" secondItem="UVt-Z3-HDW" secondAttribute="leading" id="nIG-Ki-O9H"/>
                             <constraint firstItem="Jtk-f0-F3Y" firstAttribute="trailing" secondItem="WUs-hO-1zA" secondAttribute="trailing" id="pSp-wP-s4T"/>
+                            <constraint firstItem="h0A-WT-00j" firstAttribute="leading" secondItem="WW1-ML-cgt" secondAttribute="leading" id="tvg-ao-nL0"/>
                             <constraint firstItem="myf-uI-OXy" firstAttribute="leading" secondItem="rG6-Dn-Q2r" secondAttribute="leading" constant="15" id="urb-SU-Jcw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rG6-Dn-Q2r"/>
                     </view>
                     <connections>
+                        <outlet property="codeNumLabel" destination="h0A-WT-00j" id="c20-Wq-748"/>
                         <outlet property="imageCollectionView" destination="aFp-uS-rAr" id="bEq-7n-CL4"/>
                         <outlet property="nameMachineTF" destination="UVt-Z3-HDW" id="S3v-Hw-w8f"/>
                         <outlet property="qrImageView" destination="WW1-ML-cgt" id="V9a-aM-WR8"/>

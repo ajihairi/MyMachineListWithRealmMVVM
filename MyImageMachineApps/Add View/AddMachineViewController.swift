@@ -26,6 +26,7 @@ class AddMachineViewController: UIViewController {
     @IBOutlet weak var imageCollectionView: UICollectionView!
     @IBOutlet weak var saveBtn: BXButton!
     @IBOutlet weak var qrImageView: UIImageView!
+    @IBOutlet weak var codeNumLabel: UILabel!
     
     var dataAdd = MachineModelObject()
     var filteredImages = Array<ImageModel>()
@@ -82,6 +83,7 @@ class AddMachineViewController: UIViewController {
                     self.filteredImages.append(imageDat)
                 }
             }
+            self.codeNumLabel.text = "Code: \(self.dataAdd.code_num)"
             self.filteredImages = self.filteredImages.sorted(by: {$0.name! < $1.name!})
             self.typeMachineTF.text = self.dataAdd.type
             self.nameMachineTF.text = self.dataAdd.name
@@ -89,6 +91,7 @@ class AddMachineViewController: UIViewController {
             self.qrImageView.image = QRGenerators().generateQRCode(from: "\(self.dataAdd.code_num)")
             self.imageCollectionView.reloadData()
         }
+        self.codeNumLabel.isHidden = self.qrImageView.isHidden
     }
     
     @IBAction func saveAction(_ sender: Any) {
@@ -190,9 +193,26 @@ extension AddMachineViewController: UICollectionViewDelegate, UICollectionViewDa
             // open galery here
             self.didOpenGallery()
         } else {
-            print("index", indexPath.item, indexPath.row)
+            if self.whichShow == .edit {
+                let imageView = UIImageView(image: DataManager().load(fileName: self.filteredImages[indexPath.row].name!))
+                imageView.frame = self.view.frame
+                imageView.backgroundColor = UIColor.black.withAlphaComponent(50)
+                imageView.contentMode = .scaleAspectFit
+                imageView.isUserInteractionEnabled = true
+
+                let tap = UITapGestureRecognizer(target: self, action: #selector(dismissFullscreenImage))
+                imageView.addGestureRecognizer(tap)
+                self.view.addSubview(imageView)
+            } else {
+                
+            }
             // open image here
         }
+    }
+    
+    // Use to back from full mode
+    @objc func dismissFullscreenImage(_ sender: UITapGestureRecognizer) {
+        sender.view?.removeFromSuperview()
     }
     
     
