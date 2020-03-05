@@ -308,21 +308,59 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UlZ-rK-Llv" customClass="BXButton" customModule="MyImageMachineApps" customModuleProvider="target">
+                                <rect key="frame" x="15" y="796" width="384" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="10"/>
+                                <state key="normal" title="Save Machine">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRaduis">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                        <color key="value" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="0.18065030809999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="saveAction:" destination="ixc-YO-Wbx" eventType="touchUpInside" id="p8Q-XX-8IR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="rG6-Dn-Q2r" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="aFp-uS-rAr" secondAttribute="bottom" constant="15" id="2Ry-Vn-eP5"/>
+                            <constraint firstItem="rG6-Dn-Q2r" firstAttribute="bottom" secondItem="UlZ-rK-Llv" secondAttribute="bottom" constant="25" id="22t-RL-ABi"/>
+                            <constraint firstItem="UlZ-rK-Llv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="aFp-uS-rAr" secondAttribute="bottom" constant="15" id="2Ry-Vn-eP5"/>
                             <constraint firstItem="rG6-Dn-Q2r" firstAttribute="trailing" secondItem="aFp-uS-rAr" secondAttribute="trailing" constant="15" id="50p-Jj-XyC"/>
                             <constraint firstItem="UVt-Z3-HDW" firstAttribute="leading" secondItem="rG6-Dn-Q2r" secondAttribute="leading" constant="15" id="JX0-lV-08e"/>
                             <constraint firstItem="UVt-Z3-HDW" firstAttribute="top" secondItem="myf-uI-OXy" secondAttribute="bottom" constant="8" id="N4L-RP-cQf"/>
                             <constraint firstItem="aFp-uS-rAr" firstAttribute="top" secondItem="Jtk-f0-F3Y" secondAttribute="bottom" constant="15" id="Q1X-bi-ULu"/>
                             <constraint firstItem="Jtk-f0-F3Y" firstAttribute="leading" secondItem="WUs-hO-1zA" secondAttribute="leading" id="YhZ-Cz-T7t"/>
                             <constraint firstItem="WUs-hO-1zA" firstAttribute="trailing" secondItem="UVt-Z3-HDW" secondAttribute="trailing" id="Z7D-Ai-yKR"/>
+                            <constraint firstItem="rG6-Dn-Q2r" firstAttribute="trailing" secondItem="UlZ-rK-Llv" secondAttribute="trailing" constant="15" id="aON-0K-Afx"/>
                             <constraint firstItem="aFp-uS-rAr" firstAttribute="leading" secondItem="rG6-Dn-Q2r" secondAttribute="leading" constant="15" id="b79-Pe-GKH"/>
                             <constraint firstItem="WUs-hO-1zA" firstAttribute="top" secondItem="UVt-Z3-HDW" secondAttribute="bottom" constant="15" id="dBo-pV-npg"/>
                             <constraint firstItem="Jtk-f0-F3Y" firstAttribute="top" secondItem="WUs-hO-1zA" secondAttribute="bottom" constant="8" id="dVF-IH-ci6"/>
                             <constraint firstItem="rG6-Dn-Q2r" firstAttribute="trailing" secondItem="myf-uI-OXy" secondAttribute="trailing" constant="15" id="dyk-It-XLL"/>
                             <constraint firstItem="myf-uI-OXy" firstAttribute="top" secondItem="rG6-Dn-Q2r" secondAttribute="top" constant="15" id="i5u-hi-QMh"/>
+                            <constraint firstItem="UlZ-rK-Llv" firstAttribute="leading" secondItem="rG6-Dn-Q2r" secondAttribute="leading" constant="15" id="ijM-Y4-jJa"/>
                             <constraint firstItem="rG6-Dn-Q2r" firstAttribute="trailing" secondItem="UVt-Z3-HDW" secondAttribute="trailing" constant="15" id="jqe-dn-eSC"/>
                             <constraint firstItem="WUs-hO-1zA" firstAttribute="leading" secondItem="UVt-Z3-HDW" secondAttribute="leading" id="nIG-Ki-O9H"/>
                             <constraint firstItem="Jtk-f0-F3Y" firstAttribute="trailing" secondItem="WUs-hO-1zA" secondAttribute="trailing" id="pSp-wP-s4T"/>
@@ -333,6 +371,7 @@
                     <connections>
                         <outlet property="imageCollectionView" destination="aFp-uS-rAr" id="bEq-7n-CL4"/>
                         <outlet property="nameMachineTF" destination="UVt-Z3-HDW" id="S3v-Hw-w8f"/>
+                        <outlet property="saveBtn" destination="UlZ-rK-Llv" id="b4V-Ur-OJo"/>
                         <outlet property="typeMachineTF" destination="Jtk-f0-F3Y" id="XeI-Mq-1WB"/>
                     </connections>
                 </viewController>

@@ -10,8 +10,8 @@ import Foundation
 import RealmSwift
 
 protocol MachineListProtocol {
-    func getMachineList(type: Object.Type, success: @escaping(Results<MachineModel>) -> (), failure: @escaping(String) -> ())
-    func addMachineList(data: MachineModel, success: @escaping(String) -> (), failure: @escaping(String) -> ())
-    func editMachineList(data: MachineModel, success: @escaping(String) -> (), failure: @escaping(String) -> ())
-    func deleteMachineList(id: MachineModel, success: @escaping(String) -> (), failure: @escaping(String) -> ())
+    func getMachineList(type: Object.Type, success: @escaping(Array<MachineModelObject>) -> (), failure: @escaping(String) -> ())
+    func addMachineList(data: MachineModelObject, success: @escaping(String) -> (), failure: @escaping(String) -> ())
+    func editMachineList(data: MachineModelObject, success: @escaping(String) -> (), failure: @escaping(String) -> ())
+    func deleteMachineList(id: MachineModelObject, success: @escaping(String) -> (), failure: @escaping(String) -> ())
 }

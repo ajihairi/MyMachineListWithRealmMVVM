@@ -21,11 +21,24 @@ class AddMachineColl: UICollectionViewCell {
     
     var delegate: addMachineCollDelegate?
     var index = 0
+    var section = 0
+    
+    var data: ImageModelObject? {
+        didSet {
+            if data != nil {
+                self.titleLabel.text = self.data!.name
+                let image = DataManager().retrieveImage(forKey: self.data!.name, inStorageType: .userDefaults)
+                self.imageAsset.image = image
+                self.imageAsset.contentMode = .scaleAspectFill
+            }
+        }
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
         self.imageAsset.isUserInteractionEnabled = true
     }
+    
     @IBAction func deleteAction(_ sender: Any) {
         self.delegate?.didDelete(index: index)
     }
@@ -35,3 +48,4 @@ class AddMachineColl: UICollectionViewCell {
     }
     
 }
+

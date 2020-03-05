@@ -5,6 +5,9 @@ target 'MyImageMachineApps' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 pod 'RealmSwift'
+pod 'YPImagePicker'
+pod 'ObjectMapper', '~> 3.4'
+pod 'SwiftyJSON', '~> 4.0'
 
   # Pods for MyImageMachineApps
 

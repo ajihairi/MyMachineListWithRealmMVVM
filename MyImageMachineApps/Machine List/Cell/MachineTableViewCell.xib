@@ -17,12 +17,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vng-CL-NEA" customClass="GSView" customModule="MyImageMachineApps" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="10" width="320" height="62"/>
+                        <rect key="frame" x="15" y="10" width="290" height="62"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.rain" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="l9m-FP-VFx" customClass="GSImageView" customModule="MyImageMachineApps" customModuleProvider="target">
                                 <rect key="frame" x="5" y="10" width="47" height="48.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="l9m-FP-VFx" secondAttribute="height" multiplier="1:1" id="BYf-So-msk"/>
+                                    <constraint firstAttribute="height" constant="47" id="0tc-IF-fuI"/>
+                                    <constraint firstAttribute="width" constant="47" id="emd-69-woT"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -31,24 +32,32 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdw-hP-YKh">
-                                <rect key="frame" x="58" y="10" width="247" height="17"/>
+                                <rect key="frame" x="58" y="10" width="217" height="17"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hUN-Lu-Nux">
-                                <rect key="frame" x="58" y="32.5" width="247" height="14.5"/>
+                                <rect key="frame" x="58" y="32.5" width="217" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="code Machine" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CEE-Jl-odo">
+                                <rect key="frame" x="207.5" y="34" width="67.5" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="hUN-Lu-Nux" firstAttribute="bottom" secondItem="l9m-FP-VFx" secondAttribute="bottom" constant="-10" id="AdS-60-lRy"/>
+                            <constraint firstItem="CEE-Jl-odo" firstAttribute="centerY" secondItem="hUN-Lu-Nux" secondAttribute="centerY" id="JbH-cs-4vf"/>
                             <constraint firstItem="hUN-Lu-Nux" firstAttribute="leading" secondItem="Vdw-hP-YKh" secondAttribute="leading" id="PQD-Jt-XRl"/>
                             <constraint firstAttribute="bottom" secondItem="l9m-FP-VFx" secondAttribute="bottom" constant="5" id="TjW-TR-NoJ"/>
                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="62" id="cX8-HS-JGE"/>
+                            <constraint firstAttribute="trailing" secondItem="CEE-Jl-odo" secondAttribute="trailing" constant="15" id="gJf-bA-bzY"/>
                             <constraint firstItem="l9m-FP-VFx" firstAttribute="top" secondItem="Vng-CL-NEA" secondAttribute="top" constant="10" id="hFS-Hs-dv8"/>
                             <constraint firstItem="Vdw-hP-YKh" firstAttribute="leading" secondItem="l9m-FP-VFx" secondAttribute="trailing" constant="6" id="kls-9t-xXU"/>
                             <constraint firstAttribute="trailing" secondItem="Vdw-hP-YKh" secondAttribute="trailing" constant="15" id="tKo-or-g7p"/>
@@ -84,13 +93,19 @@
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="Vng-CL-NEA" secondAttribute="bottom" constant="10" id="Gyy-1c-nPS"/>
                     <constraint firstItem="Vng-CL-NEA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="VY9-q5-6FI"/>
-                    <constraint firstItem="Vng-CL-NEA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Yj6-Y0-gnV"/>
-                    <constraint firstAttribute="trailing" secondItem="Vng-CL-NEA" secondAttribute="trailing" id="t3p-cc-iHm"/>
+                    <constraint firstItem="Vng-CL-NEA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="Yj6-Y0-gnV"/>
+                    <constraint firstAttribute="trailing" secondItem="Vng-CL-NEA" secondAttribute="trailing" constant="15" id="t3p-cc-iHm"/>
                 </constraints>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="137.68115942028987" y="147.32142857142856"/>
+            <connections>
+                <outlet property="machineCode" destination="CEE-Jl-odo" id="9il-Gu-whh"/>
+                <outlet property="machineImage" destination="l9m-FP-VFx" id="e9m-bS-7qG"/>
+                <outlet property="machineName" destination="Vdw-hP-YKh" id="mrA-zo-THW"/>
+                <outlet property="machineType" destination="hUN-Lu-Nux" id="aBF-ph-cHl"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="146.65178571428569"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -10,6 +10,12 @@
 		3C2B9EFF180B8484A78CC659 /* Pods_MyImageMachineApps_MyImageMachineAppsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2D258601F732C6B11F017FA /* Pods_MyImageMachineApps_MyImageMachineAppsUITests.framework */; };
 		8B391F99F30D5A64BA69FB2F /* Pods_MyImageMachineAppsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9D3B1F7E937ECF9DFEABFD5 /* Pods_MyImageMachineAppsTests.framework */; };
 		A8DE6B8A360B45707AE816F6 /* Pods_MyImageMachineApps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B83233AB99C1303B78339182 /* Pods_MyImageMachineApps.framework */; };
+		FB260D7F240F3F050008BDEA /* AddNewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB260D7D240F3F050008BDEA /* AddNewCollectionViewCell.swift */; };
+		FB260D80240F3F050008BDEA /* AddNewCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB260D7E240F3F050008BDEA /* AddNewCollectionViewCell.xib */; };
+		FB375D372410AC29003B2E88 /* Data Manager + Realm Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB375D362410AC29003B2E88 /* Data Manager + Realm Helper.swift */; };
+		FB375D392410AC43003B2E88 /* Results+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB375D382410AC43003B2E88 /* Results+Extension.swift */; };
+		FB375D3B2410AEF1003B2E88 /* UIIMage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB375D3A2410AEF1003B2E88 /* UIIMage+Extension.swift */; };
+		FB375D3F2410DFB8003B2E88 /* Binary + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB375D3E2410DFB7003B2E88 /* Binary + Extension.swift */; };
 		FBB262C4240E888100C64057 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB262C3240E888100C64057 /* AppDelegate.swift */; };
 		FBB262C6240E888100C64057 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB262C5240E888100C64057 /* SceneDelegate.swift */; };
 		FBB262C8240E888100C64057 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB262C7240E888100C64057 /* ViewController.swift */; };
@@ -24,7 +30,7 @@
 		FBB262FA240E8F9C00C64057 /* RoutingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB262F9240E8F9C00C64057 /* RoutingData.swift */; };
 		FBB262FC240E902200C64057 /* MachineListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB262FB240E902200C64057 /* MachineListViewController.swift */; };
 		FBB262FE240E903500C64057 /* CodeScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB262FD240E903500C64057 /* CodeScannerViewController.swift */; };
-		FBB26308240E960800C64057 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB26307240E960800C64057 /* Models.swift */; };
+		FBB26308240E960800C64057 /* RealmHelper+Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB26307240E960800C64057 /* RealmHelper+Model.swift */; };
 		FBB2630B240E9DEB00C64057 /* MachineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB26309240E9DEB00C64057 /* MachineTableViewCell.swift */; };
 		FBB2630C240E9DEB00C64057 /* MachineTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FBB2630A240E9DEB00C64057 /* MachineTableViewCell.xib */; };
 		FBB26310240E9E5300C64057 /* EmptyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB2630E240E9E5300C64057 /* EmptyTableViewCell.swift */; };
@@ -65,6 +71,12 @@
 		B492B7053F363F3BFAF07AA1 /* Pods-MyImageMachineApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyImageMachineApps.debug.xcconfig"; path = "Target Support Files/Pods-MyImageMachineApps/Pods-MyImageMachineApps.debug.xcconfig"; sourceTree = "<group>"; };
 		B83233AB99C1303B78339182 /* Pods_MyImageMachineApps.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyImageMachineApps.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E9D3B1F7E937ECF9DFEABFD5 /* Pods_MyImageMachineAppsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyImageMachineAppsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB260D7D240F3F050008BDEA /* AddNewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewCollectionViewCell.swift; sourceTree = "<group>"; };
+		FB260D7E240F3F050008BDEA /* AddNewCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddNewCollectionViewCell.xib; sourceTree = "<group>"; };
+		FB375D362410AC29003B2E88 /* Data Manager + Realm Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data Manager + Realm Helper.swift"; sourceTree = "<group>"; };
+		FB375D382410AC43003B2E88 /* Results+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Results+Extension.swift"; sourceTree = "<group>"; };
+		FB375D3A2410AEF1003B2E88 /* UIIMage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIIMage+Extension.swift"; sourceTree = "<group>"; };
+		FB375D3E2410DFB7003B2E88 /* Binary + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Binary + Extension.swift"; sourceTree = "<group>"; };
 		FBB262C0240E888100C64057 /* MyImageMachineApps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyImageMachineApps.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB262C3240E888100C64057 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FBB262C5240E888100C64057 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,7 +97,7 @@
 		FBB262F9240E8F9C00C64057 /* RoutingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoutingData.swift; sourceTree = "<group>"; };
 		FBB262FB240E902200C64057 /* MachineListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineListViewController.swift; sourceTree = "<group>"; };
 		FBB262FD240E903500C64057 /* CodeScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeScannerViewController.swift; sourceTree = "<group>"; };
-		FBB26307240E960800C64057 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		FBB26307240E960800C64057 /* RealmHelper+Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RealmHelper+Model.swift"; sourceTree = "<group>"; };
 		FBB26309240E9DEB00C64057 /* MachineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineTableViewCell.swift; sourceTree = "<group>"; };
 		FBB2630A240E9DEB00C64057 /* MachineTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MachineTableViewCell.xib; sourceTree = "<group>"; };
 		FBB2630E240E9E5300C64057 /* EmptyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyTableViewCell.swift; sourceTree = "<group>"; };
@@ -251,6 +263,8 @@
 			isa = PBXGroup;
 			children = (
 				FBB262F7240E8F1C00C64057 /* UIViewController+Extension.swift */,
+				FB375D3A2410AEF1003B2E88 /* UIIMage+Extension.swift */,
+				FB375D3E2410DFB7003B2E88 /* Binary + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -276,7 +290,9 @@
 		FBB26306240E95F200C64057 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FBB26307240E960800C64057 /* Models.swift */,
+				FBB26307240E960800C64057 /* RealmHelper+Model.swift */,
+				FB375D362410AC29003B2E88 /* Data Manager + Realm Helper.swift */,
+				FB375D382410AC43003B2E88 /* Results+Extension.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -330,6 +346,8 @@
 			children = (
 				FBB26320240EBB0E00C64057 /* AddMachineColl.swift */,
 				FBB26321240EBB0E00C64057 /* AddMachineColl.xib */,
+				FB260D7D240F3F050008BDEA /* AddNewCollectionViewCell.swift */,
+				FB260D7E240F3F050008BDEA /* AddNewCollectionViewCell.xib */,
 			);
 			path = Coll;
 			sourceTree = "<group>";
@@ -446,6 +464,7 @@
 				FBB262D0240E888200C64057 /* LaunchScreen.storyboard in Resources */,
 				FBB26311240E9E5300C64057 /* EmptyTableViewCell.xib in Resources */,
 				FBB2630C240E9DEB00C64057 /* MachineTableViewCell.xib in Resources */,
+				FB260D80240F3F050008BDEA /* AddNewCollectionViewCell.xib in Resources */,
 				FBB262CD240E888200C64057 /* Assets.xcassets in Resources */,
 				FBB262CB240E888100C64057 /* Main.storyboard in Resources */,
 				FBB26323240EBB0E00C64057 /* AddMachineColl.xib in Resources */,
@@ -577,8 +596,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBB262F8240E8F1C00C64057 /* UIViewController+Extension.swift in Sources */,
+				FB375D392410AC43003B2E88 /* Results+Extension.swift in Sources */,
 				FBB26315240EA29D00C64057 /* MachineListProtocol.swift in Sources */,
 				FBB26319240EA99B00C64057 /* MachineViewModel.swift in Sources */,
+				FB375D372410AC29003B2E88 /* Data Manager + Realm Helper.swift in Sources */,
 				FBB262C8240E888100C64057 /* ViewController.swift in Sources */,
 				FBB2630B240E9DEB00C64057 /* MachineTableViewCell.swift in Sources */,
 				FBB26317240EA35A00C64057 /* MachineService.swift in Sources */,
@@ -586,14 +607,17 @@
 				FBB262C4240E888100C64057 /* AppDelegate.swift in Sources */,
 				FBB26310240E9E5300C64057 /* EmptyTableViewCell.swift in Sources */,
 				FBB26313240E9F7D00C64057 /* CustomView.swift in Sources */,
+				FB375D3F2410DFB8003B2E88 /* Binary + Extension.swift in Sources */,
 				FBB262FA240E8F9C00C64057 /* RoutingData.swift in Sources */,
+				FB375D3B2410AEF1003B2E88 /* UIIMage+Extension.swift in Sources */,
 				FBB262FE240E903500C64057 /* CodeScannerViewController.swift in Sources */,
 				FBB2631E240EB71C00C64057 /* AddMachineViewController.swift in Sources */,
 				FBB26322240EBB0E00C64057 /* AddMachineColl.swift in Sources */,
 				FBB262C6240E888100C64057 /* SceneDelegate.swift in Sources */,
 				FBB262F4240E8A2200C64057 /* BXButton.swift in Sources */,
+				FB260D7F240F3F050008BDEA /* AddNewCollectionViewCell.swift in Sources */,
 				FBB262F6240E8A7100C64057 /* GSImageView.swift in Sources */,
-				FBB26308240E960800C64057 /* Models.swift in Sources */,
+				FBB26308240E960800C64057 /* RealmHelper+Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
