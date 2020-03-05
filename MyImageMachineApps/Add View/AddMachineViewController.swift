@@ -101,6 +101,9 @@ class AddMachineViewController: UIViewController {
             }
         } else {
             // edit here
+            self.viewModel.updateMachineData(data: self.dataAdd) {
+                self.navigationController?.popViewController(animated: true)
+            }
         }
     }
     
