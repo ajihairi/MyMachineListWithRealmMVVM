@@ -125,31 +125,10 @@ class MachineViewModel {
         } else if data.code_num == 0 {
             self.alertMessage = "error generating data code number"
         } else {
-            data.id = incrementID()
-            for (index,item) in data.images.enumerated() {
-                item.id = data.id
-                print("terpanggil ga sih")
-                //                UIImageWriteToSavedPhotosAlbum(item.imageData!, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
-                guard let docPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first else {return}
-                guard let writePath = NSURL(fileURLWithPath: docPath).appendingPathComponent("MachineName_\(index + item.id).JPG") else { return }
-                if let dataImgs = item.imageData?.jpegData(compressionQuality: 10), !FileManager.default.fileExists(atPath: writePath.path) {
-                    do {
-                        try dataImgs.write(to: writePath)
-                        item.name = writePath.lastPathComponent
-                        item.imageString = writePath.absoluteString
-                        print("file saved")
-                        item.imageData = nil
-                        if index == data.images.count - 1 {
-                            self.service.addMachineList(data: data, success: { doneData in
-                                completion()
-                            }) { (error) in
-                                self.alertMessage = error
-                            }
-                        }
-                    } catch {
-                        print("error saving file:", error)
-                    }
-                }
+            self.service.editMachineList(data: data, success: { (done) in
+                completion()
+            }) { (error) in
+                self.alertMessage = error
             }
         }
     }

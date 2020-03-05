@@ -32,14 +32,9 @@ class MachineService: MachineListProtocol {
     }
     
     func editMachineList(data: MachineModelObject, success: @escaping (String) -> (), failure: @escaping (String) -> ()) {
-        let objects = realm.objects(MachineModelObject.self).filter("id == \(data.id)")
-        
-        if let object = objects.first {
-            try! realm.write {
-                object.name = data.name
-                object.type = data.type
-                object.images = data.images
-            }
+        try! realm.write {
+            realm.create(MachineModelObject.self, value: data, update: .modified)
+            success("success")
         }
     }
     

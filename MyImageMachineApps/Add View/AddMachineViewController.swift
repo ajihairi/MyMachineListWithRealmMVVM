@@ -95,21 +95,25 @@ class AddMachineViewController: UIViewController {
     }
     
     @IBAction func saveAction(_ sender: Any) {
-        self.dataAdd.name = nameMachineTF.text ?? ""
-        self.dataAdd.type = typeMachineTF.text?.lowercased().trimmingCharacters(in: .whitespaces) ?? ""
         if self.whichShow == .add {
+            self.dataAdd.name = nameMachineTF.text ?? ""
+            self.dataAdd.type = typeMachineTF.text?.lowercased().trimmingCharacters(in: .whitespaces) ?? ""
             self.viewModel.addMachineData(data: self.dataAdd) {
                 //show alert success
                 self.navigationController?.popViewController(animated: true)
             }
         } else {
-            // edit here
-            self.viewModel.updateMachineData(data: self.dataAdd) {
+            let updatedData = MachineModelObject()
+            updatedData.id = self.dataAdd.id
+            updatedData.name = nameMachineTF.text ?? ""
+            updatedData.type = typeMachineTF.text?.lowercased().trimmingCharacters(in: .whitespaces) ?? ""
+            updatedData.code_num = self.dataAdd.code_num
+            updatedData.images = self.dataAdd.images
+            self.viewModel.updateMachineData(data: updatedData) {
                 self.navigationController?.popViewController(animated: true)
             }
         }
     }
-    
 }
 
 extension AddMachineViewController: addMachineCollDelegate {
